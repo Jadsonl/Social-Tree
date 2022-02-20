@@ -40,7 +40,7 @@ a:hover{
 }
 
 .icon:hover path{
-  stroke: black;
+  stroke: aqua;
 }
 
 @media (max-width: 408px){

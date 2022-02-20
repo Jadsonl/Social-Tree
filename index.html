@@ -6,6 +6,14 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Social Tree</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
+<script>
+  function OnMouse(elemento){
+  elemento.style.backgroundColor="aqua"
+  }
+  function OutMouse(elemento){
+    elemento.style.backgroundColor="#edb887f8"
+  }
+ </script>
 </head>
 
 <body>
@@ -14,10 +22,10 @@
 <p id="name"> <a href=""> @Jadsonlk </a></p>
 
 <section>
-  <div class="link"> <a href="#"><p> Github </p> </a>  </div>
-  <div class="link"><a href="#"><p> Twitch</p>  </a> </div>
-  <div class="link"> <a href="#"><p>Instagram </p> </a> </div>
-  <div class="link"> <a href="#"><p> Twitter </p> </a>
+  <div class="link" onmouseover="OnMouse(this)" onmouseout="OutMouse(this)"> <a href="#"><p> Github </p> </a>  </div>
+  <div class="link" onmouseover="OnMouse(this)" onmouseout="OutMouse(this)"><a href="#"><p> Twitch</p>  </a> </div>
+  <div class="link" onmouseover="OnMouse(this)" onmouseout="OutMouse(this)"> <a href="#"><p>Instagram </p> </a> </div>
+  <div class="link" onmouseover="OnMouse(this)" onmouseout="OutMouse(this)"> <a href="#"><p> Twitter </p> </a>
 </div>
 </section>
   
