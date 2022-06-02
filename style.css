@@ -1,64 +1,113 @@
 :root {
   --body-bg-color: #FAF7FD;
   --blue: #13678A;
-  --background: #edb887f8;
+  --Bright-blue: #26bcfd;
+  --background: rgb(245,194,154);
+  :root{
+    font-size: 62.5% ;
+}
 }
 body{
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--background);
+  font-family: calibri, Helvetica, sans-serif;
+  background: var(--background);
+  background-repeat: no-repeat;
+   background-position:center;
+  background-size: 100%;
   color: var(--blue);
   text-align: center; 
 }
+
+.perfil-circle{
+     display: flex;
+    justify-content: center;
+}
 .foto{
-  border: 3px solid var(--blue);  
+  background: url("https://i.pinimg.com/736x/23/95/bd/2395bdde211fb5045ef8ea7c68209ebd.jpg");
+  background-size:180%;
+  background-position:center;
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 250px;
+  background-color:white;
   border-radius: 50%; 
-  padding: 3px; 
+  margin-top: 7px;
+  align-items:center;
+  position:absolute;
   }
+
+.efeito{
+  height: 265px;
+  width: 265px;
+  text-align:center;
+  border-radius: 50%; 
+  background: linear-gradient(97deg, rgba(52, 45, 190, 1) 0%, rgba(0, 212,255,1) 100%);
+  animation: loading 0.8s infinite;
+
+}
+ @keyframes loading{
+  from { 
+    tranform: rotate(0deg); 
+  }
+  to{ 
+    transform: rotate(360deg);
+  }
+} 
+
 a{
   text-decoration: none;
   color: var(--blue)
 }
-a:hover{
- color: black;
 
+#name a:hover{
+  color: var(--Bright-blue); 
 }
+
+p{
+  font-family: 'Roboto', sans-serif;
+  
+  font-size: 20px;
+} 
 .link{
+  background: #ffffff; 
   font-size: 1.1em;
   text-align: center;
   border: 2px solid var(--blue); 
   width: 300px; 
   margin: auto;
-  margin-top: 13px;
-  border-radius: 5px;
-  padding: 0px 20px 0px 20px;
+  margin-top: 1.3rem;
+  border-radius: 0.5rem;
+  padding: 0rem 2rem 0rem 2rem;
 }
 
 .icon{
- padding: 40px 30px 0px 10px;
+ padding: 4rem 3rem 0rem 1rem;
  color: var(--blue);
- 
 }
 
 .icon:hover path{
   stroke: aqua;
 }
 
-@media (max-width: 408px){
+@media (max-width: 420px){
   .icon{
-  padding: 20px 5px 0px 5px;
+  padding: 0.2rem 0.5rem 0rem 0.5rem;
   margin-left: 2%; 
   }
   .link{
-  padding: 0px 5px;
+  padding: 0rem 0.5rem;
   width: 250px;
   }
+ 
+ 
 }
 
 @media (max-width:255px){
  .icon{
   margin-left: 15%;
  }
-  #name, .foto{
+  
+  #name,
+  .foto{
   margin-left: 20%; 
   }
 }

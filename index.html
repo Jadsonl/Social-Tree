@@ -6,22 +6,25 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Social Tree</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
-<script>
-  function OnMouse(elemento){
-  elemento.style.backgroundColor="aqua"
-  }
-  function OutMouse(elemento){
-    elemento.style.backgroundColor="#edb887f8"
-  }
- </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 	<main>
-		<img class="foto" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png" alt="foto" height="180px" width="180px"> 
-<p id="name"> <a href=""> @Jadsonlk </a></p>
+    <div class="perfil-circle">
+        <div class="efeito">  </div>
+        <div class="foto">
+      
+    </div>
+     
+    </div>
 
 <section>
+   <p id="name"> <a href="#"> @Jadsonlk </a></p>
   <div class="link" onmouseover="OnMouse(this)" onmouseout="OutMouse(this)"> <a href="#"><p> Github </p> </a>  </div>
   <div class="link" onmouseover="OnMouse(this)" onmouseout="OutMouse(this)"><a href="#"><p> Twitch</p>  </a> </div>
   <div class="link" onmouseover="OnMouse(this)" onmouseout="OutMouse(this)"> <a href="#"><p>Instagram </p> </a> </div>
@@ -59,5 +62,6 @@
 </section>
 
 </main>
+  <script src="/script.js"> </script>
 </body>
 </html>
