@@ -1,0 +1,150 @@
+*{
+ padding: 0;
+ margin: 0;
+ text-decoration: none;
+ list-style-type: none;
+ text-align: center;
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background: #252526;
+  color: white;
+  overflow: hidden;
+}
+
+.circle{
+  width: 165px;
+  height:165px;
+  background:url('https://i.pinimg.com/736x/23/95/bd/2395bdde211fb5045ef8ea7c68209ebd.jpg') no-repeat;
+  background-size:190%;
+  background-position: top center;
+  border-radius:50%;
+  margin: auto;
+  border: 3px solid #00FFFF;
+  margin-top: 32px;
+  animation: animation 2s linear 1s infinite normal ;
+}  
+
+.detalhes p:nth-child(1){
+  font-size: 19px;
+  margin-top: 8px;
+}
+
+.detalhes p:nth-child(2){
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 3px;
+}
+
+.detalhes p:nth-child(3){
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 18px;
+}
+
+@keyframes animation{
+ 15%{ border-color: #a0d5f3 ;}
+ 30%{ border-color: #68bfee;}
+ 50%{ border-color: #198ac8; }
+ 100%{ border-color:  #a2d3ec;}
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.grupo-icon{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+  
+}
+
+.icon path{
+ stroke:#ffffff;
+ margin: 10px;
+}
+
+.icon:hover path{
+  stroke: #0396d6;
+}
+
+.icon{
+  width: 25px; 
+  height:25px;
+  padding: 10px;
+}
+
+ul li {
+  background: black;
+  width: 345px;
+  height: 40px;
+  color: white;
+  margin: 15px;
+  box-shadow: 2px 3px 11px #050505;
+  border-radius: 3px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  transition: transform .4s;
+}
+
+ul li:hover  {
+  transform: scale(1.05);
+  transition: transform .4s, border .4s;  
+  /*  opacity: 0.8;  */
+
+  cursor: pointer;
+}
+
+
+@keyframes upDrop{
+  from {
+    
+    transform: translateY(30px);
+  }
+  to{
+    
+    transform: translateY(0px);
+  }
+} 
+
+
+footer{
+  padding: 0.3rem 0;
+  text-transform: uppercase; 
+  font-size: 0.8rem;
+  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+ 
+}
+
+footer p a{
+  color: #ffffff;
+}
+footer p a:hover{
+  color: #68bfee;
+}
+@media (max-width: 408px){
+  ul li{
+  width: 300px;
+  height: 40px;
+  }
+  .icon{
+  width:  20px; 
+  height: 20px;
+  padding: 13px;
+  }
+
+  .links{
+   right: 19%;
+  }
+}
