@@ -1,16 +1,21 @@
 *{
- padding: 0;
- margin: 0;
- text-decoration: none;
- list-style-type: none;
- text-align: center;
- font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
+  font-family: "Source Serif 4", serif;
   background: #252526;
   color: white;
   overflow: hidden;
+  display: grid;
+  grid-template-areas: 'main'
+  'footer';
+
 }
 
 .circle{
@@ -20,34 +25,47 @@ body{
   background-size:190%;
   background-position: top center;
   border-radius:50%;
-  margin: auto;
+  margin: 0 auto;
   border: 3px solid #00FFFF;
-  margin-top: 32px;
   animation: animation 2s linear 1s infinite normal ;
 }  
 
 .detalhes p:nth-child(1){
-  font-size: 19px;
+  font-size: 22px;
   margin-top: 8px;
 }
 
 .detalhes p:nth-child(2){
-  font-size: 12px;
+  font-size: 13px;
   opacity: 0.8;
   margin-top: 3px;
 }
 
 .detalhes p:nth-child(3){
-  font-size: 12px;
+  font-size: 13px;
   opacity: 0.8;
   margin-bottom: 18px;
 }
 
 @keyframes animation{
- 15%{ border-color: #a0d5f3 ;}
- 30%{ border-color: #68bfee;}
- 50%{ border-color: #198ac8; }
- 100%{ border-color:  #a2d3ec;}
+  15%{ border-color: #a0d5f3 ;}
+  30%{ border-color: #68bfee;}
+  50%{ border-color: #198ac8; }
+  100%{ border-color:  #a2d3ec;}
+}
+.ph{
+  color: white;
+  font-size: 25px;
+}
+
+.ph:hover{
+  color: #00FFFF;
+}
+
+.grupo-icon{
+  display: flex;
+  gap: 30px;
+  justify-content: center;
 }
 
 .links{
@@ -56,49 +74,31 @@ body{
   align-items: center; 
 }
 
-.grupo-icon{
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: center;
-}
-  
-}
-
-.icon path{
- stroke:#ffffff;
- margin: 10px;
-}
-
-.icon:hover path{
-  stroke: #0396d6;
-}
-
-.icon{
-  width: 25px; 
-  height:25px;
-  padding: 10px;
-}
-
 ul li {
   background: black;
+
   width: 345px;
   height: 40px;
+
   color: white;
   margin: 15px;
-  box-shadow: 2px 3px 11px #050505;
+
   border-radius: 3px;
+
   text-transform: uppercase;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   margin-bottom: 24px;
+
   transition: transform .4s;
 }
 
 ul li:hover  {
   transform: scale(1.05);
   transition: transform .4s, border .4s;  
-  /*  opacity: 0.8;  */
 
   cursor: pointer;
 }
@@ -114,17 +114,15 @@ ul li:hover  {
     transform: translateY(0px);
   }
 } 
-
+main{
+  grid-area: main;
+}
 
 footer{
+  grid-area: footer;
   padding: 0.3rem 0;
   text-transform: uppercase; 
-  font-size: 0.8rem;
-  
-  position: fixed;
-  bottom: 0;
-  width: 100%;
- 
+  font-size: 0.8rem; 
 }
 
 footer p a{
@@ -145,6 +143,6 @@ footer p a:hover{
   }
 
   .links{
-   right: 19%;
+  right: 19%;
   }
 }
